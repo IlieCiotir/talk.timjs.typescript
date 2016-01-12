@@ -75,11 +75,51 @@ f = anotherMethod;
 interface Person {
     name: string;
     age: number;
-    nationality?: string;
+    nationality?: string; // optional member
 }
 
 let person: Person = { name: 'ilie', age: 5, nationality: 'javascript' };
 anotherMethod(person); // refactor the other methods to use this interface?
 
+// Interface for function
+interface Predicate {
+    (person: Person): boolean;
+}
+
+let personIerator = function(predicate: Predicate): void {
+    predicate({ name: 'Ion', age: 22 });
+}
+
+personIerator((p: Person) => p.age > 18);
+
+// hybrid interface
+interface Hybrid {
+    (something: string): boolean;
+    somethingElse?: string;
+    anotherThing: boolean;
+}
+
+// classes
+
+class Presenter {
+    private theme: string;
+    private name;
+    constructor(name: string, theme: string) {
+        this.theme = theme;
+        this.name = name;
+    }
+
+    present() {
+        console.log(this.title);
+    }
+
+    private get title(): string {
+        return this.name + " is presenting " + this.theme;
+    }
 
 
+}
+
+let presenter = new Presenter('Ilie', 'Typescript');
+
+presenter.present();

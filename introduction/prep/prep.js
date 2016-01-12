@@ -64,3 +64,27 @@ var f;
 f = anotherMethod;
 var person = { name: 'ilie', age: 5, nationality: 'javascript' };
 anotherMethod(person); // refactor the other methods to use this interface?
+var personIerator = function (predicate) {
+    predicate({ name: 'Ion', age: 22 });
+};
+personIerator(function (p) { return p.age > 18; });
+// classes
+var Presenter = (function () {
+    function Presenter(name, theme) {
+        this.theme = theme;
+        this.name = name;
+    }
+    Presenter.prototype.present = function () {
+        console.log(this.title);
+    };
+    Object.defineProperty(Presenter.prototype, "title", {
+        get: function () {
+            return this.name + " is presenting " + this.theme;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Presenter;
+})();
+var presenter = new Presenter('Ilie', 'Typescript');
+presenter.present();
