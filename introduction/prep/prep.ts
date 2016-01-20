@@ -64,8 +64,9 @@ doSomethingWithThis(5).toUpperCase();
 // interfaces
 // inline
 function anotherMethod(person: { name: string, age: number }): void {
-    person.name;
+    let {name, age} = person; // object destructuring
 }
+
 anotherMethod({ name: 'ion', age: 20 });
 
 var f: (person: { name: string, age: number }) => void;
@@ -82,4 +83,4 @@ let person: Person = { name: 'ilie', age: 5, nationality: 'javascript' };
 anotherMethod(person); // refactor the other methods to use this interface?
 
 
-
+    
