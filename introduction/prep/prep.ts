@@ -18,6 +18,7 @@ var myAwesomeBoolean: boolean = true;
 // arrays
 var myAwesomeArray: number[] = [1, 2, 3, 4, 5];
 var myOtherAwesomeArray: Array<boolean> = [true, false];
+var [x, y, ...rest] = myOtherAwesomeArray; // array destructuring
 
 // enums
 // simple
@@ -123,5 +124,4 @@ class Presenter {
 
 
 let presenter = new Presenter('Ilie', 'Typescript');
-
 presenter.present();
