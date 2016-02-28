@@ -57,7 +57,7 @@ doSomethingWithThis(5).toUpperCase();
 // interfaces
 // inline
 function anotherMethod(person) {
-    person.name;
+    var name = person.name, age = person.age; // object destructuring
 }
 anotherMethod({ name: 'ion', age: 20 });
 var f;

@@ -18,6 +18,7 @@ var myAwesomeBoolean: boolean = true;
 // arrays
 var myAwesomeArray: number[] = [1, 2, 3, 4, 5];
 var myOtherAwesomeArray: Array<boolean> = [true, false];
+var [x, y, ...rest] = myOtherAwesomeArray; // array destructuring
 
 // enums
 // simple
@@ -64,8 +65,9 @@ doSomethingWithThis(5).toUpperCase();
 // interfaces
 // inline
 function anotherMethod(person: { name: string, age: number }): void {
-    person.name;
+    let {name, age} = person; // object destructuring
 }
+
 anotherMethod({ name: 'ion', age: 20 });
 
 var f: (person: { name: string, age: number }) => void;
@@ -120,8 +122,8 @@ class Presenter {
 
 }
 
-let presenter = new Presenter('Ilie', 'Typescript');
 
+let presenter = new Presenter('Ilie', 'Typescript');
 presenter.present();
 
 
