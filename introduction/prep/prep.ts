@@ -123,3 +123,50 @@ class Presenter {
 let presenter = new Presenter('Ilie', 'Typescript');
 
 presenter.present();
+
+
+`string text ${person.name} string text`
+
+
+
+
+
+class ErrorKindA {
+    errorMessage: string;
+    getError(): string {
+        return this.errorMessage;
+    }
+}
+
+class ErrorKindB {
+    information: string;
+    getInformation(): string {
+        return this.information;
+    }
+}
+
+class Child {
+    otherThing: string;
+    getThing(): string {
+        return this.otherThing;
+    }
+}
+var y = new Child();
+applyMixins(y, [ErrorKindA]);
+
+
+
+applyMixins(Child, [ErrorKindA, ErrorKindB]);
+var x = new Child();
+
+////////////////////////////////////////
+// In your runtime library somewhere
+////////////////////////////////////////
+
+function applyMixins(derivedCtor: any, baseCtors: any[]) {
+    baseCtors.forEach(baseCtor => {
+        Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
+            derivedCtor.prototype[name] = baseCtor.prototype[name];
+        })
+    });
+}

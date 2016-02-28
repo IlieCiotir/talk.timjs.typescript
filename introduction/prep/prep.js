@@ -88,3 +88,42 @@ var Presenter = (function () {
 })();
 var presenter = new Presenter('Ilie', 'Typescript');
 presenter.present();
+"string text " + person.name + " string text";
+var ErrorKindA = (function () {
+    function ErrorKindA() {
+    }
+    ErrorKindA.prototype.getError = function () {
+        return this.errorMessage;
+    };
+    return ErrorKindA;
+})();
+var ErrorKindB = (function () {
+    function ErrorKindB() {
+    }
+    ErrorKindB.prototype.getInformation = function () {
+        return this.information;
+    };
+    return ErrorKindB;
+})();
+var Child = (function () {
+    function Child() {
+    }
+    Child.prototype.getThing = function () {
+        return this.otherThing;
+    };
+    return Child;
+})();
+var y = new Child();
+applyMixins(y, [ErrorKindA]);
+applyMixins(Child, [ErrorKindA, ErrorKindB]);
+var x = new Child();
+////////////////////////////////////////
+// In your runtime library somewhere
+////////////////////////////////////////
+function applyMixins(derivedCtor, baseCtors) {
+    baseCtors.forEach(function (baseCtor) {
+        Object.getOwnPropertyNames(baseCtor.prototype).forEach(function (name) {
+            derivedCtor.prototype[name] = baseCtor.prototype[name];
+        });
+    });
+}
