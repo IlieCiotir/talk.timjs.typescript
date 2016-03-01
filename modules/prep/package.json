@@ -1,0 +1,17 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "systemjs": "^0.19.23"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
