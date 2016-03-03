@@ -19,3 +19,4 @@ System.register(['./fire', './water'], function(exports_1) {
         }
     }
 });
+//# sourceMappingURL=magic.js.map

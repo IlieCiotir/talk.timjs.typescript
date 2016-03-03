@@ -22,3 +22,4 @@ System.register(['./wizards/WaterMage'], function(exports_1) {
         }
     }
 });
+//# sourceMappingURL=Application.js.map

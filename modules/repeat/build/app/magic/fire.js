@@ -19,3 +19,4 @@ System.register([], function(exports_1) {
         }
     }
 });
+//# sourceMappingURL=fire.js.map

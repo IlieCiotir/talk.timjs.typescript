@@ -6,3 +6,4 @@ System.register([], function(exports_1) {
         }
     }
 });
+//# sourceMappingURL=spell.js.map

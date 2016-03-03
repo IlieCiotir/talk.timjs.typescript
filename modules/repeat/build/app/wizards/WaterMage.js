@@ -28,3 +28,4 @@ System.register(['../magic/magic'], function(exports_1) {
         }
     }
 });
+//# sourceMappingURL=WaterMage.js.map

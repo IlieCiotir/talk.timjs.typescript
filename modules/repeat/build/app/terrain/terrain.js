@@ -5,3 +5,4 @@ var Terrain = (function () {
     return Terrain;
 }());
 new Terrain();
+//# sourceMappingURL=terrain.js.map
