@@ -20,7 +20,7 @@ System.register(['../magic/magic'], function(exports_1) {
                 };
                 WaterMage.prototype.attack = function (dmg) {
                     this.life -= dmg;
-                    console.log(this.name + " took " + dmg + " and has " + this.life + " left.");
+                    console.log(this.name + " took " + dmg + " magic and has " + this.life + " left.");
                 };
                 return WaterMage;
             }());

@@ -15,6 +15,6 @@ export class WaterMage implements Wizard {
   public attack(dmg: number) {
 
     this.life -= dmg;
-    console.log(`${this.name} took ${dmg} and has ${this.life} left.`);
+    console.log(`${this.name} took ${dmg} magic and has ${this.life} left.`);
   }
 }
