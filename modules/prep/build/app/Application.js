@@ -1,5 +1,6 @@
-System.register(['./game/Game', './score/Scoring'], function(exports_1) {
+System.register(['./game/Game', './score/Scoring'], function(exports_1, context_1) {
     "use strict";
+    var __moduleName = context_1 && context_1.id;
     var Game_1, Scoring_1;
     var Application;
     return {
