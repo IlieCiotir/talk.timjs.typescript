@@ -1,6 +1,5 @@
-System.register(['./app/Application'], function(exports_1, context_1) {
+System.register(['./app/Application'], function(exports_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var Application_1;
     return {
         setters:[
